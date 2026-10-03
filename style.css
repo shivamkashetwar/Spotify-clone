@@ -1,0 +1,95 @@
+
+*{
+    padding: 0px;
+    margin: 0px;;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+
+.left{
+    width: 25vw;
+    padding: 14px;
+
+}
+.right{
+    width: 75vw;
+}
+.home ul li{
+    width: 14px;
+    list-style: none;
+    display:flex;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+}
+.logo{
+    width: 34px;
+}
+.heading{
+     width: 100%;
+    display:flex;
+    gap: 15px;
+    padding-top: 14px;
+    padding: 23px 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+}
+.heading img{
+    width: 25px;
+}
+.library{
+    min-height: 80vh;
+position:relative;
+}
+.footer{
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+
+}
+.right{
+    margin: 16px 0;
+}
+.footer a{
+    color: grey;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34,34,34);
+}
+
+.header > * {
+    padding: 20px;
+}
+.spotifyplaylist{
+    padding: 16px;
+}
+.cardcontainer{
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+}
+.card{
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: #252525;
+}
+.card >*{
+    padding-top:3px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+
+}
