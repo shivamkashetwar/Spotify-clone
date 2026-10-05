@@ -52,6 +52,7 @@ position:relative;
     gap: 13px;
     position: absolute;
     bottom: 0;
+    padding: 28px 0px;
 
 }
 .right{
@@ -73,10 +74,11 @@ position:relative;
     padding: 16px;
 }
 .cardcontainer{
-    margin: 10px;
+    margin: 30px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    max-height: 70vh;
 
 }
 .card{
@@ -84,6 +86,7 @@ position:relative;
     width: 150px;
     border-radius: 5px;
     background-color: #252525;
+    position: relative;
 }
 .card >*{
     padding-top:3px;
@@ -92,4 +95,44 @@ position:relative;
     width: 100%;
     object-fit: contain;
 
+}
+.play{
+    position: absolute;
+    top: 108px;
+    right: 17px;
+}
+.button >*{
+    margin:0 12px;
+}
+.signupbtn {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 500px;
+    transition: transform 0.2s ease;
+}
+
+.signupbtn:hover {
+    transform: scale(1.05);
+}
+
+.loginbtn {
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 500px;
+    transition: transform 0.2s ease;
+    border: 1px solid gray;
+}
+
+.loginbtn:hover {
+    transform: scale(1.05);
 }
