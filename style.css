@@ -17,6 +17,7 @@ body{
 }
 .right{
     width: 75vw;
+    position: absolute;
 }
 .home ul li{
     width: 14px;
@@ -57,6 +58,7 @@ position:relative;
 }
 .right{
     margin: 16px 0;
+    position: relative;
 }
 .footer a{
     color: grey;
@@ -135,4 +137,24 @@ position:relative;
 
 .loginbtn:hover {
     transform: scale(1.05);
+}
+
+.playbar{
+    position:absolute;
+    bottom:0;
+    padding: 12px;
+   width: 90%;
+   background-color:rgb(241, 245, 241);
+}
+.songbutton{
+    display:flex;
+    justify-content:center;
+    gap: 16px;
+}
+.songlist ul{
+    padding: 0 42px;
+
+}
+.songlist ul li{
+list-style-type: decimal;
 }
