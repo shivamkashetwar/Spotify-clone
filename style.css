@@ -157,4 +157,33 @@ position:relative;
 }
 .songlist ul li{
 list-style-type: decimal;
+display: flex;
+gap: 34px;
+cursor: pointer;
+padding: 12px 0;
+padding: 13px;
+margin: 12px 0;
+border-radius: 5px;
+border: 1px solid white;
+}
+
+.playnow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    white-space: nowrap;
+}
+
+.playnow span {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playnow img {
+    width: 25px;
+    height: 25px;
 }
