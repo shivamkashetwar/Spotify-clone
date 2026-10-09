@@ -11,7 +11,7 @@ async function getsongs() {
     for (let i = 0; i < as.length; i++) {
         const element = as[i];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href);
+            songs.push(element.href.split("/songs/")[1])
         }
     }
 
@@ -22,11 +22,25 @@ async function main() {
     const songs = await getsongs();
     console.log(songs);
 
-    var audio=new audio(songs[0]);
-    audio.play()
+    
+let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0];
+
+for (const song of songs) {
+    let cleanSong = song.replace(".mp3", "")
+        .replaceAll("_", " ")
+        .replaceAll("-", " ")
+        .replace(/\(mp3\.pm\)/g, "")
+        .replaceAll("%20", " ")
+        .trim();
+
+    songUL.innerHTML += `<li>${cleanSong}</li>`;
+}
+
+    var Audio=new Audio(songs[0]);
+      Audio.play()
    
-    audio.addEventListener("loadeddata",()=>{
-     console.log(audio.duration,audio.currentSrc ,audio.currentTime,)
+    Audio.addEventListener("loadeddata",()=>{
+     console.log(Audio.duration,Audio.currentSrc ,Audio.currentTime,)
     });
 
 }
