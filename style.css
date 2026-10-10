@@ -140,11 +140,15 @@ position:relative;
 }
 
 .playbar{
-    position:absolute;
-    bottom:0;
+    position:fixed;
+    bottom:30px;
     padding: 12px;
-   width: 90%;
+   width: 70vw;
    background-color:rgb(241, 245, 241);
+   filter: invert(1);
+    background-color: #dad5da;
+    border-radius: 30px;
+    height: 30px;
 }
 .songbutton{
     display:flex;
@@ -152,19 +156,31 @@ position:relative;
     gap: 16px;
 }
 .songlist ul{
-    padding: 0 42px;
+    padding: -3px 12px;
 
 }
 .songlist ul li{
 list-style-type: decimal;
 display: flex;
-gap: 34px;
+gap: 10px;
 cursor: pointer;
 padding: 12px 0;
 padding: 13px;
 margin: 12px 0;
 border-radius: 5px;
 border: 1px solid white;
+justify-content: space-between;
+}
+
+.songlist .info {
+    font-size: 13px;
+    width: 344px;
+}
+
+.songlist {
+    height: 444px;
+    overflow: auto;
+    margin-bottom: 44px;
 }
 
 .playnow {
@@ -186,4 +202,23 @@ border: 1px solid white;
 .playnow img {
     width: 25px;
     height: 25px;
+}
+.seekbar{
+    height: 2px;
+    width: 96%;
+    background: black;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    margin: 6px;
+}
+.circle{
+    height: 13px;
+    width: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+    left: 0;
+    transition: left 0.5s;
 }
