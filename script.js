@@ -26,19 +26,31 @@ async function main() {
 let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0];
 
 for (const song of songs) {
-    let cleanSong = song.replace(".mp3", "")
+    let cleanSong = song
+        .replace(".mp3", "")
         .replaceAll("_", " ")
         .replaceAll("-", " ")
         .replace(/\(mp3\.pm\)/g, "")
         .replaceAll("%20", " ")
         .trim();
 
-    songUL.innerHTML += `<li>${cleanSong}</li>`;
+    songUL.innerHTML += `
+        <li>
+            <img class="invert" src="music.svg" alt="">
+
+            <div class="info">
+                <div>${cleanSong}</div>
+                <div>Unknown Artist</div>
+            </div>
+
+            <div class="playnow">
+                <span>Play Now</span>
+                <img class="invert" src="play.svg" alt="">
+            </div>
+        </li>`;
 }
 
-    var Audio=new Audio(songs[0]);
-      Audio.play()
-   
+    
     Audio.addEventListener("loadeddata",()=>{
      console.log(Audio.duration,Audio.currentSrc ,Audio.currentTime,)
     });
