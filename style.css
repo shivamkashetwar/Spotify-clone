@@ -222,3 +222,14 @@ justify-content: space-between;
     left: 0;
     transition: left 0.5s;
 }
+.songinfo,.songtime{
+    color: black;
+    padding: 0 12px;
+}
+.songbutton img{
+    cursor: pointer;
+}
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+}
